@@ -3,7 +3,7 @@
 
 target 'TestPreCommitLint' do
   use_frameworks!
-
+  pod 'SDWebImage'
 end
 
 pre_install do |installer|

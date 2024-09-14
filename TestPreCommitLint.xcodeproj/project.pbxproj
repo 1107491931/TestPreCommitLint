@@ -105,6 +105,7 @@
 				ECD4176D2C94225A00BAE7FA /* Sources */,
 				ECD4176E2C94225A00BAE7FA /* Frameworks */,
 				ECD4176F2C94225A00BAE7FA /* Resources */,
+				26E8FA0B4E7B85217821B594 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +163,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		26E8FA0B4E7B85217821B594 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestPreCommitLint/Pods-TestPreCommitLint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestPreCommitLint/Pods-TestPreCommitLint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestPreCommitLint/Pods-TestPreCommitLint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B1048C0D5FEB548A7E8FFC07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

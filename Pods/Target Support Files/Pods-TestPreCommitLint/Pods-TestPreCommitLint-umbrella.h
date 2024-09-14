@@ -13,3 +13,4 @@
 
 FOUNDATION_EXPORT double Pods_TestPreCommitLintVersionNumber;
 FOUNDATION_EXPORT const unsigned char Pods_TestPreCommitLintVersionString[];
+
