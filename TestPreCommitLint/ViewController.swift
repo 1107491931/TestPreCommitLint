@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     }
 }
 
-
-
 /*
  安装插件：brew install pre-commit
  生成yaml文件：pre-commit sample-config > .pre-commit-config.yaml
