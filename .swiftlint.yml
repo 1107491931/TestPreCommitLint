@@ -15,7 +15,7 @@ identifier_name:
 # 2、{前应该有空格
 opening_brace:
   severity: warning
-  allow_multiline_func: true
+  allow_multiline_func: false
 
 
 disabled_rules: # 禁止生效的规则

@@ -24,8 +24,9 @@ class ViewController: UIViewController {
     }
 
     func test(para1: String,
-              para2: String) {
-
+              para2: String
+              para3: String) {
+        
     }
 }
 
