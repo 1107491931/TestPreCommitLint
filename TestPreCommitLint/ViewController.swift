@@ -12,11 +12,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
 
-
         
-        let a = 22
-
-
+        
 
     }
 }
