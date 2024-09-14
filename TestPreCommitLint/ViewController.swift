@@ -19,6 +19,12 @@ class ViewController: UIViewController {
 
         let b = 111111
 
+        print("增加了很多空行")
+
+    }
+
+    func test() {
+
     }
 }
 
