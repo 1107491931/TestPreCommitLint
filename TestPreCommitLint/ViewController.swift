@@ -11,20 +11,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-    
-        
         print("11111")
-        
-        
+
         let a = 111111
-        
-        
+
         NSLog("规划局打电话给大家阿克拉干哈")
-        
-       
-        
-        
+
+        let b = 111111
+
     }
 }
 
@@ -35,5 +29,5 @@ class ViewController: UIViewController {
  // 生成yaml文件：pre-commit sample-config > .pre-commit-config.yaml
  // 手动执行检测： pre-commit run --all-files
  // 此后提交代码就会自动检测，如果想跳过检测： git commit --no-verify -m "xxx"
-
+ 
  */

@@ -14,7 +14,7 @@ repos:
   rev: 0.54.0
   hooks:
   - id: swiftlint
-    entry: swiftlint  --fix --config .swiftlint.yml
+    entry: swiftlint --fix --config .swiftlint.yml
     # name: SwiftLint
     # description: "Check Swift files for issues with SwiftLint"
     
