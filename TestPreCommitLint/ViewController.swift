@@ -23,7 +23,8 @@ class ViewController: UIViewController {
 
     }
 
-    func test() {
+    func test(para1: String,
+              para2: String) {
 
     }
 }
