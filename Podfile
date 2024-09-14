@@ -4,6 +4,8 @@
 target 'TestPreCommitLint' do
   use_frameworks!
   pod 'SDWebImage'
+  pod 'SwiftLint', '0.55.1'
+
 end
 
 pre_install do |installer|
