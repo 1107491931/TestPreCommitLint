@@ -3,7 +3,7 @@ excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高
 
 strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
 
-identifier_name:
+identifier_name: # 变量名称
   min_length:
     warning: 3
     error: 2
@@ -11,4 +11,8 @@ identifier_name:
     warning: 40
     error: 60
 
+
+
 disabled_rules: # 禁止生效的规则
+  # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
+  
