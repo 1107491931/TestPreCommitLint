@@ -1,88 +1,14 @@
 excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
   - Pods # 忽略通过CocoaPods倒入的第三方库
 
-disabled_rules: # 执行时排除掉的规则
-  - identifier_name  
-  - trailing_whitespace
-  - type_body_length
-  - large_tuple
-  - comma
-  - line_length
-  - file_length
-  - function_body_length
-  - force_cast
-  - cyclomatic_complexity
-  - force_try
-  - shorthand_operator
-  - duplicate_conditions
-  - no_fallthrough_only
-  - type_name
-  - function_parameter_count
-  - opening_brace
-  - colon
-  - closure_parameter_position
-  - vertical_whitespace
-  - comment_spacing
-  - redundant_discardable_let
-  - trailing_semicolon
-  - control_statement
-  - statement_position
-  - unneeded_break_in_switch
-  - unneeded_override
-  - unused_closure_parameter
-  - return_arrow_whitespace
-  - empty_enum_arguments
-  - computed_accessors_order
-  - syntactic_sugar
-  - vertical_parameter_alignment
-  - multiple_closures_with_trailing_closure
-  - redundant_void_return
-  - implicit_getter
-  - redundant_string_enum_value
-  - unavailable_condition
-  - redundant_optional_initialization
-  - redundant_optional_initialization
-  - trailing_newline
-  - mark
-  - for_where
-  - void_return
-  - switch_case_alignment
-  - block_based_kvo
-  - private_over_fileprivate
-  - todo
-  - block_based_kvo
-  - orphaned_doc_comment
-  - protocol_property_accessors_order
-  - trailing_comma
-  - orphaned_doc_comment
-  - leading_whitespace
-  - notification_center_detachment
-  - no_space_in_method_call
-  - legacy_constructor
-  - no_space_in_method_call
-  - notification_center_detachment
-  - operator_whitespace
-  - non_optional_string_data_conversion
-  - void_function_in_ternary
-  - duplicate_imports
-  - empty_parentheses_with_trailing_closure
-  - deployment_target
-  - compiler_protocol_init
-  - unused_enumerated
-  - unused_optional_binding
-  - legacy_hashing
-  - legacy_random
-  - legacy_constant
-  - inclusive_language
-  - redundant_objc_attribute
-  - unused_setter_value
+strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
 
-custom_rules:
-  debug_log_limit: # 规则标识符
-    name: "禁止使用print、debugPrint、NSLog;" # 规则名称，可选
-    regex: "(print|NSLog|debugPrint)" # 匹配的模式
-    match_kinds: # 需要匹配的语法类型，可选
-      - comment
-      - identifier
-    message: "建议使用SmartDeviceCoreSDK中的logDebug函数." # 提示信息，可选
-    severity: warning # 提示的级别，可选
+identifier_name:
+  min_length:
+    warning: 3
+    error: 2
+  max_length:
+    warning: 40
+    error: 60
+
+disabled_rules: # 禁止生效的规则
