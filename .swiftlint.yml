@@ -15,8 +15,19 @@ identifier_name:
 # 2、{前应该有空格
 opening_brace:
   severity: warning
-  allow_multiline_func: false
+   #定义的函数是否允许多行展示，参数多的时候一般会多个参数换行对齐，所以设置为true。 如果设置为false，则多行函数会报错： Corrected Trailing Whitespace
+  allow_multiline_func: true 
+
+# 3、可选类型禁止强制解包
+force_cast:
+    severity: error
+
+# 4、未使用的闭包参数，可以使用_代替
+unused_closure_parameter:
+    severity: warning
+
 
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
+  

@@ -23,9 +23,10 @@ class ViewController: UIViewController {
 
     }
 
-    func test(para1: String, para2: String, para3: String, para4: String) {
-
-    }
+    private lazy var imageView: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
 }
 
 /*
