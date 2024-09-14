@@ -11,8 +11,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let a = 11
-        print(11)
+
 
 
 
