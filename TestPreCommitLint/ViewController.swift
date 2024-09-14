@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         
         print("11111")
-        
+        NSLog("规划局打电话给大家阿克拉干哈")
         
         
         
