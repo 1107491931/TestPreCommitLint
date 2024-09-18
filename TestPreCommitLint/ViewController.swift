@@ -19,8 +19,7 @@ class ViewController: UIViewController {
             print(name)
         })
 
-        let list: [Int] = []
-        list.map({$0})
+        let set = Set.init(arrayLiteral: 1, 2)
 
     }
 
