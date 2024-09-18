@@ -87,9 +87,9 @@ identifier_name:
 #   ignores_case_statements: false
 
 # # 13、文件代码行数限制
-# file_length:
-#   warning: 1000
-#   error: 1200
+file_length:
+  warning: 10
+  error: 12
 
 # # 14、返回值为空，不需要显示声明void
 # redundant_void_return:
