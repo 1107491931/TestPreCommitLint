@@ -245,6 +245,10 @@ legacy_constant:
 mark:
   severity: warning
 
+# 46、在定义字符串枚举的时候, 当字符串枚举值等于枚举名称时，可以不用赋值
+redundant_string_enum_value:
+  severity: error
+
 
 
 
@@ -286,7 +290,12 @@ opt_in_rules:
   # 数字分割线。当在大量的小数中， 应该使用下划线来作为千分位分割线, 看起来没生效
   - number_separator
 
+  # 操作符两边得有空格 如let a = 1+2是不合法的，+左右得有空格
   - operator_usage_whitespace
+
+  # 在switch-case语句中, 建议不要将case中的let和var等关键字放到元祖内
+  # https://juejin.cn/post/6844903576821727239#heading-9 参考75条
+  - pattern_matching_keywords
 
 
 
