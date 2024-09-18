@@ -270,6 +270,7 @@ opt_in_rules:
   # let、var声明的变量与其它逻辑增加空白行间隔开
   - let_var_whitespace
 
+  # 字典和数组的开头和结尾要有相同的缩进格式
   - literal_expression_end_indentation
 
 
