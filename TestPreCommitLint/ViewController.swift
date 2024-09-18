@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let aaaaa: CGRect = .zero
-        printContent(aaaaa)
+        test(name: "", name1: "",
+             name2: "")
     }
     
     // MARK: 11111
-    func test(name: String, callBack: VoidCallBack) {
+    func test(name: String, name1: String, name2: String) {
         let x11111 = [
             1,
             2
