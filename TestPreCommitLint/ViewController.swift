@@ -11,7 +11,7 @@ typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
     let a11 = 1
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
 
         let list = [1, 3, 1]
