@@ -12,7 +12,7 @@ typealias VoidCallBack = (String) -> Void
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        if true { print("") }
+        if true { return }
     }
 
     func test(name: String, callBack: VoidCallBack) {
