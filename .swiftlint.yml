@@ -227,7 +227,7 @@ generic_type_name:
 
 # 41、只读属性不用加get，直接return
 implicit_getter:
-  severity: warning
+  severity: error
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
