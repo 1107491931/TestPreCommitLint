@@ -283,7 +283,11 @@ opt_in_rules:
   # 定义函数时， 参数都在同一行，或者一行一个参数， 好像没生效
   - multiline_parameters
 
+  # 数字分割线。当在大量的小数中， 应该使用下划线来作为千分位分割线, 看起来没生效
   - number_separator
+
+  - operator_usage_whitespace
+
 
 
 disabled_rules: # 禁止生效的规则

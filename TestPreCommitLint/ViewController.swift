@@ -17,8 +17,7 @@ class ViewController: UIViewController {
              name2: ""
         )
         
-        let xxx = 1000000000.0001
-        print(xxx)
+        let foo = 1+2
         
     }
     
