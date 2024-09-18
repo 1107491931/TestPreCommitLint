@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
         let list = [1, 3, 1]
         if list.count == 0 {
-            return
+            
         }
 
     }

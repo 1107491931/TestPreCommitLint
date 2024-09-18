@@ -217,7 +217,7 @@ opt_in_rules:
   - closure_end_indentation
 
   #判断为空，禁止使用count == 0, 建议使用isEmpty
-  - empty_count:
+  empty_count:
     severity: error
     only_after_dot: false
 
