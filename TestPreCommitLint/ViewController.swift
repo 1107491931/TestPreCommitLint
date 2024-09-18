@@ -12,19 +12,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        test(
-            name: "", name1: "",
-             name2: ""
+        test(name: "", name1: "", name2: ""
         )
         
-        let fo = 1+2
+        let f111 = 1+2
         
     }
     
     // MARK: 11111
-    func test(
-        name: String, name1: String,
-              name2: String) {
+    func test(name: String, name1: String, name2: String) {
         
     }
 

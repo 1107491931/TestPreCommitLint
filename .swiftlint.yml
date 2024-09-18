@@ -16,7 +16,7 @@ strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
 # 1、变量名称
 identifier_name:
   min_length:
-    warning: 5
+    warning: 3
     error: 2
   max_length:
     warning: 40
@@ -277,10 +277,10 @@ opt_in_rules:
   # 字典和数组的开头和结尾要有相同的缩进格式
   - literal_expression_end_indentation
 
-  # 函数调用，参数都在同一行，或者一行一个参数， 好像没生效
+  # 函数调用，参数都在同一行，或者一行一个参数
   - multiline_arguments
 
-  # 定义函数时， 参数都在同一行，或者一行一个参数， 好像没生效
+  # 定义函数时， 参数都在同一行，或者一行一个参数
   - multiline_parameters
 
   # 数字分割线。当在大量的小数中， 应该使用下划线来作为千分位分割线, 看起来没生效
