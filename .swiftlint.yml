@@ -183,9 +183,28 @@ nesting:
   always_allow_one_type_in_functions: false
   ignore_typealiases_and_associatedtypes: false
 
-operator_whitespace:
-  severity: error
+# 34、结构范围常数尽量分开、明确、具体， 不要使用OC的遗留整体常数 如: 用CGPoint.zero 不用CGPointZero
+legacy_constant:
+  severity: warning
 
+# 35、protocol只能是class类型，以便可以设置weak引用
+class_delegate_protocol:
+  severity: warning
+
+# 36、小括号包含大括号的不能用空格, 比如[1, 2].map({ $0 } )会有警告
+closing_brace:
+  severity: warning
+
+
+opt_in_rules:
+  # 前后的{}需要缩进对齐
+  closure_end_indentation:
+    severity: error
+
+  #判断为空，禁止使用count == 0, 建议适应isEmpty
+  empty_count:
+    severity: error
+    only_after_dot: false
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则

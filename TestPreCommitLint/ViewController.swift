@@ -21,10 +21,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("11111")
-
-        let a: Int = 111111
-
         NSLog("规划局打电话给大家阿克拉干哈")
 
         let b = 111111
@@ -37,9 +33,9 @@ class ViewController: UIViewController {
 
     }
 
-    func      test(name: String, callBack: () -> Void) {
+    func test(name: String, callBack: () -> Void) {
 
-    }
+}
 
 func    testhgjahdglkashgklahgaghagh(pafsgfsdgsgra1: String, pfsfafdasfar2: String, pargdsfgsdga3: String, pargdsgsdga4: String, pargdsgdsga5: String, pargdfsgsdga6: String, pargsgsga7: String, pfsfafafara8: String) -> String {
         return ""
