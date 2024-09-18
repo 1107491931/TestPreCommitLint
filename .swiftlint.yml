@@ -219,6 +219,7 @@ opt_in_rules:
   closure_spacing:
     severity: error
 
+  # if语句和实现不能在同一行，比如if true { print("") }
   conditional_returns_on_newline:
     severity: error
     if_only: false
