@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let a = 100
-        let a1 = 100
+        let list = []
+        if list.count == 0 {
+            return
+        }
 
     }
 
