@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 
         test(name: "", callBack: {
             name in
+
             print(name)
         })
 

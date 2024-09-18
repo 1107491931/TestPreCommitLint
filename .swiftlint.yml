@@ -195,6 +195,10 @@ class_delegate_protocol:
 closing_brace:
   severity: warning
 
+# 37、闭包参数应该在同一行，不应该换行
+closure_parameter_position:
+  severity: error
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
