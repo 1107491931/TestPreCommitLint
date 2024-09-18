@@ -169,9 +169,19 @@ unused_optional_binding:
   severity: warning
   ignore_optional_try: false
 
-# 控制语句, for，while，do，catch语句中的条件不能包含在()中
+# 32、控制语句, for，while，do，catch语句中的条件不能包含在()中
 control_statement:
   severity: warning
+
+# 33、嵌套层级不宜过深，类型嵌套至多一级结构， 函数语句嵌套至多五级结构
+nesting:
+  type_level:
+    warning: 1
+  function_level:
+    warning: 2
+  check_nesting_in_closures_and_statements: true
+  always_allow_one_type_in_functions: false
+  ignore_typealiases_and_associatedtypes: false
 
 
 

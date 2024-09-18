@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
     }
 
-    func test(name: String, callBack: () -> Void) {
+    func      test(name: String, callBack: () -> Void) {
 
     }
 
