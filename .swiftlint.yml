@@ -212,7 +212,7 @@ discouraged_direct_init:
   severity: warning
   types: ["Bundle", "Bundle.init", "NSError", "NSError.init", "UIDevice", "UIDevice.init"]
 
-# 40、泛型规则定义， 直蹦包含字母、数字，且以大写字符开头
+# 40、泛型规则定义， 只能包含字母、数字，且以大写字符开头
 generic_type_name:
     min_length:
       warning: 1
@@ -227,7 +227,9 @@ generic_type_name:
 
 # 41、只读属性不用加get，直接return
 implicit_getter:
-  severity: error
+  severity: warning
+
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
@@ -242,6 +244,9 @@ opt_in_rules:
 
   # if语句和实现不能在同一行，比如if true { print("") },
   - conditional_returns_on_newline
+
+  # 建议使用隐式返回闭包; 如: foo.map({ $0 + 1 })， 不需要显示return $0 + 1
+  - implicit_return
 
 
 disabled_rules: # 禁止生效的规则
