@@ -216,7 +216,7 @@ opt_in_rules:
   # 前后的{}需要缩进对齐
   - closure_end_indentation
 
-  #判断为空，禁止使用count == 0, 建议适应isEmpty
+  #判断为空，禁止使用count == 0, 建议使用isEmpty
   - empty_count
 
   #在闭包的{}中间要有一个空格,如map({ $0 })

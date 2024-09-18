@@ -28,6 +28,14 @@ class ViewController: UIViewController {
             print(list)
         }
 
+        if list.count == 0 {
+
+        } else if list.count == 0 {
+
+        } else {
+
+        }
+
     }
 
     func test(name: String, callBack: VoidCallBack) {
