@@ -201,7 +201,7 @@ closing_brace:
 
 # 37、闭包参数应该在同一行，不应该换行
 closure_parameter_position:
-  severity: warning
+  severity: error
 
 # 38、协议的init不建议使用，如let set = Set(arrayLiteral: 1, 2)、let set = Set.init(arrayLiteral: 1, 2)
 compiler_protocol_init:
