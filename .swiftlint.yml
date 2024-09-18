@@ -213,7 +213,7 @@ opt_in_rules:
 
   #在闭包的{}中间要有一个空格,如map({ $0 })
   closure_spacing:
-    severity: warning
+    severity: error
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则

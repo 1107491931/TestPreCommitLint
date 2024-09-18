@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         })
 
         let list: [Int] = []
-        list.map({ $0})
+        list.map({$0})
 
     }
 
