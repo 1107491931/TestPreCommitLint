@@ -31,6 +31,12 @@ line_length:
     warning: 150
     error: 200
 
+# 6、符号位置不对(, :等)
+colon:
+  severity: warning
+  flexible_right_spacing: true  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
+  apply_to_dictionaries: true
+
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
 
