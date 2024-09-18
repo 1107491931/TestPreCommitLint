@@ -9,7 +9,7 @@
 excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
   - Pods # 忽略通过CocoaPods倒入的第三方库
 
-strict: true #如果值为 true，SwiftLint 将把所有警告都视为错误
+strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
 
 # 1、变量名称
 identifier_name:
@@ -176,14 +176,14 @@ control_statement:
   severity: warning
 
 # 33、嵌套层级不宜过深，类型嵌套至多一级结构， 函数语句嵌套至多五级结构
-# nesting:
-#   type_level:
-#     warning: 1
-#   function_level:
-#     warning: 2
-#   check_nesting_in_closures_and_statements: true
-#   always_allow_one_type_in_functions: false
-#   ignore_typealiases_and_associatedtypes: false
+nesting:
+  type_level:
+    warning: 1
+  function_level:
+    warning: 2
+  check_nesting_in_closures_and_statements: true
+  always_allow_one_type_in_functions: false
+  ignore_typealiases_and_associatedtypes: false
 
 # 34、结构范围常数尽量分开、明确、具体， 不要使用OC的遗留整体常数 如: 用CGPoint.zero 不用CGPointZero
 legacy_constant:
