@@ -21,6 +21,14 @@ class ViewController: UIViewController {
 
         print("增加了很多空行")
 
+        test {
+            print()
+        }
+
+    }
+
+    func test(callBack: () -> Void) {
+
     }
 
     func testhgjahdglkashgklahgaghagh(pafsgfsdgsgra1: String, pfsfafdasfar2: String, pargdsfgsdga3: String, pargdsgsdga4: String, pargdsgdsga5: String, pargdfsgsdga6: String, pargsgsga7: String, pfsfafafara8: String) -> String {
