@@ -36,8 +36,8 @@ unused_closure_parameter:
 
 # 5、每行最大长度
 line_length:
-    warning: 10
-    error: 10
+    warning: 150
+    error: 200
 
 # 6、符号位置不对(, :等)
 colon:

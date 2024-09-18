@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         if true { print("") }
         if true { print("") }
 
+        let list = [1]
+        if list.count == 0 {
+            print(list)
+        }
+
     }
 
     func test(name: String, callBack: VoidCallBack) {
