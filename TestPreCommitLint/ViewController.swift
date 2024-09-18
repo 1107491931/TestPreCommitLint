@@ -7,44 +7,22 @@
 
 import UIKit
 
+typealias VoidCallBack = (String) -> Void
+
 class ViewController: UIViewController {
-    var age: Int = 0 {
-        didSet {
-            if true {
-                if true {
-
-                }
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSLog("规划局打电话给大家阿克拉干哈")
-
-        let b = 111111
-
-        print("增加了很多空行")
-
-        test(name: "") {
-
-        }
+        test(name: "", callBack: {
+            name in
+            print(name)
+        })
 
     }
 
-    func test(name: String, callBack: () -> Void) {
+    func test(name: String, callBack: VoidCallBack) {
 
-}
-
-func    testhgjahdglkashgklahgaghagh(pafsgfsdgsgra1: String, pfsfafdasfar2: String, pargdsfgsdga3: String, pargdsgsdga4: String, pargdsgdsga5: String, pargdfsgsdga6: String, pargsgsga7: String, pfsfafafara8: String) -> String {
-        return ""
     }
-
-    private lazy var imageView: UIImageView = {
-        let view = UIImageView()
-        return view
-    }()
 }
 
 /*

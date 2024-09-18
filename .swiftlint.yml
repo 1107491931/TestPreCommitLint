@@ -196,6 +196,7 @@ closing_brace:
   severity: warning
 
 
+# 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
   # 前后的{}需要缩进对齐
   closure_end_indentation:
