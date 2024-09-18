@@ -10,8 +10,8 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
-    let a11 = 1
-    override func viewDidLoad(){
+    let a1 = 1
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         let list = [1, 3, 1]

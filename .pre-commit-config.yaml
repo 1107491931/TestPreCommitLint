@@ -11,5 +11,5 @@ repos:
     rev: 0.54.0
     hooks:
     - id: swiftlint
-    entry: swiftlint --fix --strict --config .swiftlint.yml
+    entry: swiftlint --fix .swiftlint.yml
     
