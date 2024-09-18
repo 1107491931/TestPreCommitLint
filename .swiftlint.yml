@@ -201,7 +201,7 @@ closing_brace:
 
 # 37、闭包参数应该在同一行，不应该换行
 closure_parameter_position:
-  severity: error
+  severity: warning
 
 # 38、协议的init不建议使用，如let set = Set(arrayLiteral: 1, 2)、let set = Set.init(arrayLiteral: 1, 2)
 compiler_protocol_init:
@@ -212,6 +212,22 @@ discouraged_direct_init:
   severity: warning
   types: ["Bundle", "Bundle.init", "NSError", "NSError.init", "UIDevice", "UIDevice.init"]
 
+# 40、泛型规则定义， 直蹦包含字母、数字，且以大写字符开头
+generic_type_name:
+    min_length:
+      warning: 1
+      error: 0
+    max_length:
+      warning: 20
+      error: 1000
+    excluded: []
+    allowed_symbols: []
+    unallowed_symbols_severity: error
+    validates_start_with_lowercase: error
+
+# 41、只读属性不用加get，直接return
+implicit_getter:
+  severity: warning
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:

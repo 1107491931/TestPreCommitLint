@@ -10,15 +10,20 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
+    var aa1111: Int {
+        get {
+            return 111
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        test(name: "", callBack: { name in
-        })
-
+        
+        let a11111: Int64 = 99999999999999999999
     }
 
     func test(name: String, callBack: VoidCallBack) {
+        
+    }
 
-}
 }
