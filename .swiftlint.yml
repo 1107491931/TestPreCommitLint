@@ -34,7 +34,7 @@ line_length:
 # 6、符号位置不对(, :等)
 colon:
   severity: warning
-  flexible_right_spacing: true  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
+  flexible_right_spacing: false  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
   apply_to_dictionaries: true
 
 disabled_rules: # 禁止生效的规则
