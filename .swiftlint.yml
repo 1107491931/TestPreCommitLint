@@ -254,12 +254,8 @@ redundant_string_enum_value:
 vertical_parameter_alignment:
   severity: error
 
-# 48、调用多个参数函数时，如果多个参数换行，则要与第一个参数对齐
-vertical_parameter_alignment_on_call:
-  severity: error
 
-
-# 在opt_in_rules中开启了规则，同时在这个位置配置相关参数
+# 以下几个参数在opt_in_rules中开启了规则，同时在这个位置配置相关参数
 weak_delegate: # 看起来没生效
   severity: error
 
@@ -267,6 +263,9 @@ multiline_arguments:
     severity: error
     first_argument_location: any_line
     only_enforce_after_first_closure_on_first_line: false
+
+vertical_parameter_alignment_on_call:
+  severity: error
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
@@ -316,6 +315,9 @@ opt_in_rules:
 
   # delegate得增加weak弱引用，看起来没生效
   - weak_delegate
+
+  # 调用多个参数函数时，如果多个参数换行，则要与第一个参数对齐
+  - vertical_parameter_alignment_on_call
 
 
 disabled_rules: # 禁止生效的规则
