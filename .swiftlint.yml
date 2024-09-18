@@ -229,7 +229,7 @@ generic_type_name:
 implicit_getter:
   severity: warning
 
-
+# 42、文件开头不要有空行
 leading_whitespace:
   severity: error
 
