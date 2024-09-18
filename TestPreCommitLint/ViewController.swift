@@ -13,11 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        let aaaaaa = [1, 2]
-        aaaaaa.map({
-            return $0 + 1
-        })
     }
 
     func test(name: String, callBack: VoidCallBack) {

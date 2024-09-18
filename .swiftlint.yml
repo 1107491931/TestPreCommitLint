@@ -230,6 +230,9 @@ implicit_getter:
   severity: warning
 
 
+leading_whitespace:
+  severity: error
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
@@ -247,6 +250,14 @@ opt_in_rules:
 
   # 建议使用隐式返回闭包; 如: foo.map({ $0 + 1 })， 不需要显示return $0 + 1
   - implicit_return
+
+  # 声明变量时，不用显式声明为必选类型!, 比如var int: Int! = 42
+  - implicitly_unwrapped_optional
+
+  # joined方法使用默认分隔符时(空字符串), 建议使用joined()方法, 而不是joined(separator: "")方法
+  - joined_default_parameter
+
+
 
 
 disabled_rules: # 禁止生效的规则
