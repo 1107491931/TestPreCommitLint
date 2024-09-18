@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         
-        let a11111: Int64 = 99999999999999999999
+        let a11111: Int64 = 9999999999999
     }
 
     func test(name: String, callBack: VoidCallBack) {
