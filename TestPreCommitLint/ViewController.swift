@@ -22,5 +22,5 @@ class ViewController: UIViewController {
 
     func test(name: String, callBack: VoidCallBack) {
 
-    }
+}
 }
