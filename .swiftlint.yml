@@ -277,9 +277,11 @@ opt_in_rules:
   # 字典和数组的开头和结尾要有相同的缩进格式
   - literal_expression_end_indentation
 
-
+  # 函数调用，参数都在同一行，或者一行一个参数， 好像没生效
   - multiline_arguments
-  
+
+  - multiline_parameters
+
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则

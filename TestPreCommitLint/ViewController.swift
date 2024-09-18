@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: 11111
-    func test(name: String, name1: String, name2: String) {
+    func test(
+        name: String, name1: String, 
+              name2: String) {
         let x11111 = [
             1,
             2
