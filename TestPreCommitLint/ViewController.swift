@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let list = [0, 1]
         list.map( {$0} )
+        
+        if (true) {
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
