@@ -250,9 +250,8 @@ mark:
 redundant_string_enum_value:
   severity: error
 
-# 47、delegate应该弱引用
 weak_delegate:
-  severity: error
+  severity: warning
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
@@ -300,6 +299,7 @@ opt_in_rules:
   # https://juejin.cn/post/6844903576821727239#heading-9 参考75条
   - pattern_matching_keywords
 
+  - weak_delegate
 
 
 disabled_rules: # 禁止生效的规则
