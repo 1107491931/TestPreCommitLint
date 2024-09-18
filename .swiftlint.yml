@@ -20,216 +20,216 @@ identifier_name:
     warning: 40
     error: 60
 
-# 2、{前应该有空格，如果是函数应该与函数名同一行
-opening_brace:
-  severity: warning
-   #定义的函数是否允许多行展示，参数多的时候一般会多个参数换行对齐，所以设置为true。 如果设置为false，则多行函数会报错： Corrected Trailing Whitespace
-  allow_multiline_func: true 
+# # 2、{前应该有空格，如果是函数应该与函数名同一行
+# opening_brace:
+#   severity: warning
+#    #定义的函数是否允许多行展示，参数多的时候一般会多个参数换行对齐，所以设置为true。 如果设置为false，则多行函数会报错： Corrected Trailing Whitespace
+#   allow_multiline_func: true 
 
-# 3、可选类型禁止强制解包
-force_cast:
-    severity: error
+# # 3、可选类型禁止强制解包
+# force_cast:
+#     severity: error
 
-# 4、未使用的闭包参数，可以使用_代替
-unused_closure_parameter:
-    severity: warning
+# # 4、未使用的闭包参数，可以使用_代替
+# unused_closure_parameter:
+#     severity: warning
 
-# 5、每行最大长度
-line_length:
-    warning: 150
-    error: 200
+# # 5、每行最大长度
+# line_length:
+#     warning: 150
+#     error: 200
 
-# 6、符号位置不对(, :等)
-colon:
-  severity: warning
-  flexible_right_spacing: false  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
-  apply_to_dictionaries: true  # 规则应用到字典类型中
-
-
-# 7、逗号后应该有空格，逗号前应该没有空格
-comma:
-  severity: warning
-
-# 8、函数行数
-function_body_length:
-  warning: 70
-  error: 100
-
-#9、 类型名， 类型名应该只包含字母数字字符， 并且以大写字母开头，长度在3-40个字符
-type_name:
-  min_length:
-    warning: 3
-    error: 0
-  max_length:
-    warning: 40
-    error: 1000
-  excluded: [] # 不包含的目录
-  allowed_symbols: [] # 允许的符号
-  unallowed_symbols_severity: error # 出现不允许的符号，直接error
-  validates_start_with_lowercase: error # 小写字母开头，直接error
-  validate_protocols: true # 校验protocol
-
-# 10、声明的成员属性，重写set、get时，必须先get、再set，保证前后顺序，很鸡肋
-computed_accessors_order:
-  severity: warning
-  order: get_set
-
-# 11、定义的类型，body行数不能太多, class、protocol、enum、struct等
-# 由于项目中很多文件代码都很多，因此这个规则可以禁用掉
-type_body_length:
-  warning: 1000
-  error: 1200
-
-# 12、代码复杂度，如果function中循环、if语句较多、嵌套的较多，则会增加复杂度
-cyclomatic_complexity:
-  warning: 10
-  error: 20
-  ignores_case_statements: false
-
-# 13、文件代码行数限制
-file_length:
-  warning: 1000
-  error: 1200
-
-# 14、返回值为空，不需要显示声明void
-redundant_void_return:
-  severity: warning
-  include_closures: true # 包含闭包
-
-# 15、空行最多只能出现一行
-vertical_whitespace:
-  severity: warning
-  max_empty_lines: 1
-
-#16、tuple定义了太多的参数，代码可读性非常差
-large_tuple:
-    warning: 2
-    error: 3
-
-# 17、使用try! 方式
-force_try:
-  severity: error
-
-# 18、可以使用运算符，提高代码易读性, 比如 a = a + 2, 建议改为 a += 2
-shorthand_operator:
-  severity: error
-
-# 19、switch case语句中，case中至少有一条语句才使用fallthrough， 否则就使用case a, b: 方式
-no_fallthrough_only:
-  severity: warning
-
-#20、if、switch中，禁止出现相同的判断条件
-duplicate_conditions:
-  severity: error
-
-# 21、switch中不需要增加break， 默认是加上的
-unneeded_break_in_switch:
-  severity: warning
-
-# 22、代码结尾不需要分号
-trailing_semicolon:
-  severity: warning
-
-# 23、else、catch应该与前边的}在同一行，且前面得有空格
-statement_position:
-  severity: warning
-  statement_mode: default
-
-# 24、函数参数数量控制
-function_parameter_count:
-  warning: 5
-  error: 8
-  ignores_default_parameters: true
-
-# 25、函数返回值的 ——> 前后得加空格
-return_arrow_whitespace:
-  severity: warning
-
-# 26、声明可选类型并给默认值nil， 太多余了， 比如 var a: Int? = nil
-redundant_optional_initialization:
-  severity: warning
-
-# 27、语法糖错误，比如：Array<Iny> 建议 [Iny], Dictionary<Int, String> 建议 [Int: String]
-syntactic_sugar:
-    severity: warning
-
-# 28、使用type.random(in:)方式创建随机值，别用arc4random()了
-legacy_random:
-  severity: warning
-
-# 29、重写的方式为空实现，则警告提示
-unneeded_override:
-  severity: warning
-  affect_initializers: false
-
-# 30、函数结尾得有一行空行
-trailing_newline:
-  severity: warning
-
-# 31、if、guard语句判空时，禁止使用 if let _ = xxx， guard let _ = xxx， 建议使用!= nil
-unused_optional_binding:
-  severity: warning
-  ignore_optional_try: false
-
-# 32、控制语句, for，while，do，catch语句中的条件不能包含在()中
-control_statement:
-  severity: warning
-
-# 33、嵌套层级不宜过深，类型嵌套至多一级结构， 函数语句嵌套至多五级结构
-nesting:
-  type_level:
-    warning: 1
-  function_level:
-    warning: 2
-  check_nesting_in_closures_and_statements: true
-  always_allow_one_type_in_functions: false
-  ignore_typealiases_and_associatedtypes: false
-
-# 34、结构范围常数尽量分开、明确、具体， 不要使用OC的遗留整体常数 如: 用CGPoint.zero 不用CGPointZero
-legacy_constant:
-  severity: warning
-
-# 35、protocol只能是class类型，以便可以设置weak引用
-class_delegate_protocol:
-  severity: warning
-
-# 36、小括号包含大括号的不能用空格, 比如[1, 2].map({ $0 } )会有警告
-closing_brace:
-  severity: warning
-
-# 37、闭包参数应该在同一行，不应该换行
-closure_parameter_position:
-  severity: warning
-
-# 38、协议的init不建议使用，如let set = Set(arrayLiteral: 1, 2)、let set = Set.init(arrayLiteral: 1, 2)
-compiler_protocol_init:
-  severity: warning
-
-# 39、阻止直接初始化导致的错误类型, 有类方法的,用类方法初始化(不建议直接init初始化)
-discouraged_direct_init:
-  severity: warning
-  types: ["Bundle", "Bundle.init", "NSError", "NSError.init", "UIDevice", "UIDevice.init"]
+# # 6、符号位置不对(, :等)
+# colon:
+#   severity: warning
+#   flexible_right_spacing: false  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
+#   apply_to_dictionaries: true  # 规则应用到字典类型中
 
 
-# 默认未开启的能力，需要在opt_in_rules中开启
-opt_in_rules:
-  # 前后的{}需要缩进对齐
-  - closure_end_indentation
+# # 7、逗号后应该有空格，逗号前应该没有空格
+# comma:
+#   severity: warning
 
-  #判断为空，禁止使用count == 0, 建议使用isEmpty
-  - empty_count
+# # 8、函数行数
+# function_body_length:
+#   warning: 70
+#   error: 100
 
-  #在闭包的{}中间要有一个空格,如map({ $0 })
-  - closure_spacing
+# #9、 类型名， 类型名应该只包含字母数字字符， 并且以大写字母开头，长度在3-40个字符
+# type_name:
+#   min_length:
+#     warning: 3
+#     error: 0
+#   max_length:
+#     warning: 40
+#     error: 1000
+#   excluded: [] # 不包含的目录
+#   allowed_symbols: [] # 允许的符号
+#   unallowed_symbols_severity: error # 出现不允许的符号，直接error
+#   validates_start_with_lowercase: error # 小写字母开头，直接error
+#   validate_protocols: true # 校验protocol
 
-  # if语句和实现不能在同一行，比如if true { print("") },
-  - conditional_returns_on_newline
+# # 10、声明的成员属性，重写set、get时，必须先get、再set，保证前后顺序，很鸡肋
+# computed_accessors_order:
+#   severity: warning
+#   order: get_set
+
+# # 11、定义的类型，body行数不能太多, class、protocol、enum、struct等
+# # 由于项目中很多文件代码都很多，因此这个规则可以禁用掉
+# type_body_length:
+#   warning: 1000
+#   error: 1200
+
+# # 12、代码复杂度，如果function中循环、if语句较多、嵌套的较多，则会增加复杂度
+# cyclomatic_complexity:
+#   warning: 10
+#   error: 20
+#   ignores_case_statements: false
+
+# # 13、文件代码行数限制
+# file_length:
+#   warning: 1000
+#   error: 1200
+
+# # 14、返回值为空，不需要显示声明void
+# redundant_void_return:
+#   severity: warning
+#   include_closures: true # 包含闭包
+
+# # 15、空行最多只能出现一行
+# vertical_whitespace:
+#   severity: warning
+#   max_empty_lines: 1
+
+# #16、tuple定义了太多的参数，代码可读性非常差
+# large_tuple:
+#     warning: 2
+#     error: 3
+
+# # 17、使用try! 方式
+# force_try:
+#   severity: error
+
+# # 18、可以使用运算符，提高代码易读性, 比如 a = a + 2, 建议改为 a += 2
+# shorthand_operator:
+#   severity: error
+
+# # 19、switch case语句中，case中至少有一条语句才使用fallthrough， 否则就使用case a, b: 方式
+# no_fallthrough_only:
+#   severity: warning
+
+# #20、if、switch中，禁止出现相同的判断条件
+# duplicate_conditions:
+#   severity: error
+
+# # 21、switch中不需要增加break， 默认是加上的
+# unneeded_break_in_switch:
+#   severity: warning
+
+# # 22、代码结尾不需要分号
+# trailing_semicolon:
+#   severity: warning
+
+# # 23、else、catch应该与前边的}在同一行，且前面得有空格
+# statement_position:
+#   severity: warning
+#   statement_mode: default
+
+# # 24、函数参数数量控制
+# function_parameter_count:
+#   warning: 5
+#   error: 8
+#   ignores_default_parameters: true
+
+# # 25、函数返回值的 ——> 前后得加空格
+# return_arrow_whitespace:
+#   severity: warning
+
+# # 26、声明可选类型并给默认值nil， 太多余了， 比如 var a: Int? = nil
+# redundant_optional_initialization:
+#   severity: warning
+
+# # 27、语法糖错误，比如：Array<Iny> 建议 [Iny], Dictionary<Int, String> 建议 [Int: String]
+# syntactic_sugar:
+#     severity: warning
+
+# # 28、使用type.random(in:)方式创建随机值，别用arc4random()了
+# legacy_random:
+#   severity: warning
+
+# # 29、重写的方式为空实现，则警告提示
+# unneeded_override:
+#   severity: warning
+#   affect_initializers: false
+
+# # 30、函数结尾得有一行空行
+# trailing_newline:
+#   severity: warning
+
+# # 31、if、guard语句判空时，禁止使用 if let _ = xxx， guard let _ = xxx， 建议使用!= nil
+# unused_optional_binding:
+#   severity: warning
+#   ignore_optional_try: false
+
+# # 32、控制语句, for，while，do，catch语句中的条件不能包含在()中
+# control_statement:
+#   severity: warning
+
+# # 33、嵌套层级不宜过深，类型嵌套至多一级结构， 函数语句嵌套至多五级结构
+# nesting:
+#   type_level:
+#     warning: 1
+#   function_level:
+#     warning: 2
+#   check_nesting_in_closures_and_statements: true
+#   always_allow_one_type_in_functions: false
+#   ignore_typealiases_and_associatedtypes: false
+
+# # 34、结构范围常数尽量分开、明确、具体， 不要使用OC的遗留整体常数 如: 用CGPoint.zero 不用CGPointZero
+# legacy_constant:
+#   severity: warning
+
+# # 35、protocol只能是class类型，以便可以设置weak引用
+# class_delegate_protocol:
+#   severity: warning
+
+# # 36、小括号包含大括号的不能用空格, 比如[1, 2].map({ $0 } )会有警告
+# closing_brace:
+#   severity: warning
+
+# # 37、闭包参数应该在同一行，不应该换行
+# closure_parameter_position:
+#   severity: warning
+
+# # 38、协议的init不建议使用，如let set = Set(arrayLiteral: 1, 2)、let set = Set.init(arrayLiteral: 1, 2)
+# compiler_protocol_init:
+#   severity: warning
+
+# # 39、阻止直接初始化导致的错误类型, 有类方法的,用类方法初始化(不建议直接init初始化)
+# discouraged_direct_init:
+#   severity: warning
+#   types: ["Bundle", "Bundle.init", "NSError", "NSError.init", "UIDevice", "UIDevice.init"]
 
 
-disabled_rules: # 禁止生效的规则
-  # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
-  # - computed_accessors_order
-  # - type_body_length
+# # 默认未开启的能力，需要在opt_in_rules中开启
+# opt_in_rules:
+#   # 前后的{}需要缩进对齐
+#   - closure_end_indentation
+
+#   #判断为空，禁止使用count == 0, 建议使用isEmpty
+#   - empty_count
+
+#   #在闭包的{}中间要有一个空格,如map({ $0 })
+#   - closure_spacing
+
+#   # if语句和实现不能在同一行，比如if true { print("") },
+#   - conditional_returns_on_newline
+
+
+# disabled_rules: # 禁止生效的规则
+#   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
+#   # - computed_accessors_order
+#   # - type_body_length
 
 
 

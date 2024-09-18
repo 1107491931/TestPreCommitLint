@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
         }
 
-        let a = 100
+        let a1 = 100
     }
 
     func test(name: String, callBack: VoidCallBack) {
