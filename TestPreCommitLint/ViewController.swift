@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             print(name)
         })
 
-        let set = Set.init(arrayLiteral: 1, 2)
+        if true { print("") }
 
     }
 

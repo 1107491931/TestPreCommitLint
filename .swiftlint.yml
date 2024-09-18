@@ -199,6 +199,10 @@ closing_brace:
 closure_parameter_position:
   severity: warning
 
+# 38、协议的init不建议使用，如let set = Set(arrayLiteral: 1, 2)、let set = Set.init(arrayLiteral: 1, 2)
+compiler_protocol_init:
+  severity: warning
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
