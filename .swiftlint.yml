@@ -1,3 +1,5 @@
+# 参考：https://juejin.cn/post/6844903576779620366#heading-12
+
 # disabled_rules: #禁用指定的规则
 # opt_in_rules: #启动指定的规则
 # whitelist_rules: #白名单规则，不能和上面两项混用
@@ -203,6 +205,11 @@ closure_parameter_position:
 compiler_protocol_init:
   severity: warning
 
+# 39、阻止直接初始化导致的错误类型, 有类方法的,用类方法初始化(不建议直接init初始化)
+discouraged_direct_init:
+  severity: warning
+  types: ["Bundle", "Bundle.init", "NSError", "NSError.init", "UIDevice", "UIDevice.init"]
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
@@ -219,7 +226,7 @@ opt_in_rules:
   closure_spacing:
     severity: error
 
-  # if语句和实现不能在同一行，比如if true { print("") }
+  # if语句和实现不能在同一行，比如if true { print("") }, 看起来没生效
   conditional_returns_on_newline:
     severity: error
     if_only: false
