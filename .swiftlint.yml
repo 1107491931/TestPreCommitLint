@@ -213,7 +213,7 @@ discouraged_direct_init:
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
-  # 函数前后的{}需要缩进对齐
+  # 闭包前后的{}需要缩进对齐
   - closure_end_indentation
 
   #判断为空，禁止使用count == 0, 建议使用isEmpty
