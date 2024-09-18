@@ -13,13 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let list = [0, 1]
-        list.map( {$0} )
-        
-        if (true) {}
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        list.map({ $0 })
+
+        if true {
+
+        }
     }
 
     func test(name: String, callBack: VoidCallBack) {
