@@ -27,3 +27,8 @@ class ViewController: UIViewController {
     }
 
 }
+
+class Foo {
+   func foo(param1: Int,
+             param2: Bool, param3: [String]) { }
+}
