@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        test(name: "", callBack: { 
+        test(name: "", callBack: 
+                { 
             name in
             
         })
