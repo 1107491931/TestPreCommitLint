@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let list = []
+        let list = [1, 2]
         if list.count == 0 {
             return
         }
