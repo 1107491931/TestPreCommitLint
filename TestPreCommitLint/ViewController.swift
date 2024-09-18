@@ -10,12 +10,12 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
-    let a12 = 1
+    let a11 = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let list = [1, 3]
-        if list.count == 0 {
+        let list = [1, 3, 1]
+        if list.isEmpty {
             return
         }
 
