@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
         print("增加了很多空行")
 
-        test {        }
+        test {     }
 
     }
 
