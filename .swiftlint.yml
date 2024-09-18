@@ -17,8 +17,8 @@ identifier_name:
     warning: 3
     error: 2
   max_length:
-    warning: 40
-    error: 60
+    warning: 140
+    error: 160
 
 # 2、{前应该有空格，如果是函数应该与函数名同一行
 opening_brace:
@@ -127,8 +127,8 @@ unneeded_break_in_switch:
   severity: warning
 
 # 22、代码结尾不需要分号
-# trailing_semicolon:
-#   severity: warning
+trailing_semicolon:
+  severity: warning
 
 # 23、else、catch应该与前边的}在同一行，且前面得有空格
 statement_position:
@@ -230,7 +230,6 @@ disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
   # - computed_accessors_order
   # - type_body_length
-  - trailing_semicolon
 
 
 
