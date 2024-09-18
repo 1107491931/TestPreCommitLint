@@ -17,6 +17,9 @@ class ViewController: UIViewController {
              name2: ""
         )
         
+        let xxx = 1000000000.0001
+        print(xxx)
+        
     }
     
     // MARK: 11111
@@ -26,9 +29,4 @@ class ViewController: UIViewController {
         
     }
 
-}
-
-class Foo {
-   func foo(param1: Int,
-             param2: Bool, param3: [String]) { }
 }
