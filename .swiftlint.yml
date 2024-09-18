@@ -250,8 +250,13 @@ mark:
 redundant_string_enum_value:
   severity: error
 
-weak_delegate:
-  severity: error
+# weak_delegate:
+#   severity: error
+
+multiline_arguments:
+    severity: error
+    first_argument_location: any_line
+    only_enforce_after_first_closure_on_first_line: false
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
@@ -299,6 +304,7 @@ opt_in_rules:
   # https://juejin.cn/post/6844903576821727239#heading-9 参考75条
   - pattern_matching_keywords
 
+  # delegate得增加weak弱引用，看起来没生效
   - weak_delegate
 
 

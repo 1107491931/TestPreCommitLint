@@ -9,8 +9,6 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
-    var d1: AAAAA?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,12 +17,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: 11111
-    func test(name: String, name1: String, name2: String) {
+    func test(name: String, name1: String,
+              name2: String) {
         
     }
 
-}
-
-protocol AAAAA: AnyObject {
-    
 }
