@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if true { print(""); return }
+        let a = 100
+
     }
 
     func test(name: String, callBack: VoidCallBack) {
