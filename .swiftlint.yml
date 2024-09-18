@@ -220,7 +220,7 @@ opt_in_rules:
     severity: error
 
   conditional_returns_on_newline:
-    severity: warning
+    severity: error
     if_only: false
 
 disabled_rules: # 禁止生效的规则
