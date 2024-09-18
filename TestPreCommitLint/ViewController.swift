@@ -10,6 +10,7 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
+    let b: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +38,10 @@ class ViewController: UIViewController {
         }
 
         let a1 = 100
+
+        if let b = b {
+
+        }
     }
 
     func test(name: String, callBack: VoidCallBack) {
