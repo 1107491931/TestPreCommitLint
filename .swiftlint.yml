@@ -220,7 +220,7 @@ opt_in_rules:
   #判断为空，禁止使用count == 0, 建议适应isEmpty
   empty_count:
     severity: error
-    only_after_dot: false
+    only_after_dot: true
 
   #在闭包的{}中间要有一个空格,如map({ $0 })
   closure_spacing:

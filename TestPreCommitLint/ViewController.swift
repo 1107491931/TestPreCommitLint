@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
         let list = [1]
         if list.count == 0 {
-            print(list)
+            print(list, list)
         }
 
     }
