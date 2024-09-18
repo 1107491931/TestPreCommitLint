@@ -280,7 +280,9 @@ opt_in_rules:
   # 函数调用，参数都在同一行，或者一行一个参数， 好像没生效
   - multiline_arguments
 
+  # 定义函数时， 参数都在同一行，或者一行一个参数， 好像没生效
   - multiline_parameters
+
 
 
 disabled_rules: # 禁止生效的规则
