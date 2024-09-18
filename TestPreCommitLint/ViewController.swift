@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let list = [0, 1]
-        list.map({ $0 })
+        list.map( {$0} )
     }
 
     func test(name: String, callBack: VoidCallBack) {
