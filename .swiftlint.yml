@@ -233,9 +233,15 @@ implicit_getter:
 leading_whitespace:
   severity: error
 
-# 43、不要使用
+# 43、不要使用oc遗留下来的函数CGRectGetWidth(someView.frame)
 legacy_cggeometry_functions:
-    severity: error
+    severity: warning
+
+# 44、不要使用oc遗留下来的常量， 如CGRectZero、CGRectInfinite等
+legacy_constant:
+  severity: warning
+
+
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
@@ -261,7 +267,7 @@ opt_in_rules:
   # joined方法使用默认分隔符时(空字符串), 建议使用joined()方法, 而不是joined(separator: "")方法
   - joined_default_parameter
 
-
+  - let_var_whitespace
 
 
 disabled_rules: # 禁止生效的规则
