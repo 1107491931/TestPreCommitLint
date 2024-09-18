@@ -10,38 +10,8 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
-    let b: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        test(name: "", callBack: {
-            name in
-
-            print(name)
-        })
-
-        if true { print(Bundle(), NSError.init()) }
-        if true { print("") }
-        if true { print("") }
-
-        let list = [1]
-        if list.count == 0 {
-            print(list)
-        }
-
-        if list.count == 0 {
-
-        } else if list.count == 0 {
-
-        } else {
-
-        }
-
-        let a = 100
-
-        if let b1 = b {
-
-        }
     }
 
     func test(name: String, callBack: VoidCallBack) {
