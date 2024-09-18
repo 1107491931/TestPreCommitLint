@@ -219,6 +219,10 @@ opt_in_rules:
   closure_spacing:
     severity: error
 
+  conditional_returns_on_newline:
+    severity: warning
+    if_only: false
+
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
   # - computed_accessors_order

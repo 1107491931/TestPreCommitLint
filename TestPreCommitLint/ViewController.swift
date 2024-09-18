@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         })
 
         if true { print("") }
+        if true { print("") }
 
     }
 
