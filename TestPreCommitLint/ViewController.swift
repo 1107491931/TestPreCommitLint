@@ -9,6 +9,8 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
+    var delegate: AAAAA?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +25,6 @@ class ViewController: UIViewController {
 
 }
 
-
-enum VideoStatus: String {
-    case play
-    case pause
+protocol AAAAA: AnyObject {
+    
 }

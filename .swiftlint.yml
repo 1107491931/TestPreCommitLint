@@ -1,4 +1,5 @@
-# 参考：https://juejin.cn/post/6844903576779620366#heading-12
+# 参考1：https://juejin.cn/post/6844903576779620366#heading-12
+# 参考2：https://juejin.cn/post/6844903576821727239#heading-32
 
 # disabled_rules: #禁用指定的规则
 # opt_in_rules: #启动指定的规则
@@ -249,7 +250,9 @@ mark:
 redundant_string_enum_value:
   severity: error
 
-
+# 47、delegate应该弱引用
+weak_delegate:
+  severity: error
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
