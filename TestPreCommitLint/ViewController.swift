@@ -17,7 +17,7 @@ class ViewController: UIViewController {
              name2: ""
         )
         
-        let foo1 = 1+2
+        let fo = 1+2
         
     }
     
