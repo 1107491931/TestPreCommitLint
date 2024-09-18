@@ -19,6 +19,9 @@ class ViewController: UIViewController {
             print(name)
         })
 
+        let list: [Int] = []
+        list.map({ $0 })
+
     }
 
     func test(name: String, callBack: VoidCallBack) {

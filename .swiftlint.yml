@@ -197,7 +197,7 @@ closing_brace:
 
 # 37、闭包参数应该在同一行，不应该换行
 closure_parameter_position:
-  severity: error
+  severity: warning
 
 
 # 默认未开启的能力，需要在opt_in_rules中开启
@@ -210,6 +210,10 @@ opt_in_rules:
   empty_count:
     severity: error
     only_after_dot: false
+
+  #在闭包的{}中间要有一个空格,如map({ $0 })
+  closure_spacing:
+    severity: warning
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
