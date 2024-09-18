@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         let list = [0, 1]
         list.map( {$0} )
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     func test(name: String, callBack: VoidCallBack) {
 
