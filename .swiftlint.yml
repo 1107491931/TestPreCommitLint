@@ -16,7 +16,7 @@ strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
 # 1、变量名称
 identifier_name:
   min_length:
-    warning: 3
+    warning: 5
     error: 2
   max_length:
     warning: 40
