@@ -183,6 +183,8 @@ nesting:
   always_allow_one_type_in_functions: false
   ignore_typealiases_and_associatedtypes: false
 
+operator_whitespace:
+  severity: error
 
 
 disabled_rules: # 禁止生效的规则
