@@ -250,8 +250,14 @@ mark:
 redundant_string_enum_value:
   severity: error
 
-# weak_delegate:
-#   severity: error
+# 47、定义多个参数函数时，如果多个参数换行，则要与第一个参数对齐
+vertical_parameter_alignment:
+  severity: error
+
+
+# 在opt_in_rules中开启了规则，同时在这个位置配置相关参数
+weak_delegate: # 看起来没生效
+  severity: error
 
 multiline_arguments:
     severity: error
