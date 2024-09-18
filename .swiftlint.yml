@@ -9,7 +9,7 @@
 excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
   - Pods # 忽略通过CocoaPods倒入的第三方库
 
-strict: false #如果值为 true，SwiftLint 将把所有警告都视为错误
+strict: true #如果值为 true，SwiftLint 将把所有警告都视为错误
 
 # 1、变量名称
 identifier_name:
