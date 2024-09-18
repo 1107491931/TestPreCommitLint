@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if true { print("") }
+        if true { print(""); return }
     }
 
     func test(name: String, callBack: VoidCallBack) {
