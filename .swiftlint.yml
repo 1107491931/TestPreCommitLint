@@ -214,22 +214,17 @@ discouraged_direct_init:
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:
   # 前后的{}需要缩进对齐
-  closure_end_indentation:
-    severity: error
+  - closure_end_indentation
 
   #判断为空，禁止使用count == 0, 建议适应isEmpty
-  empty_count:
-    severity: error
-    only_after_dot: true
+  - empty_count
 
   #在闭包的{}中间要有一个空格,如map({ $0 })
-  closure_spacing:
-    severity: error
+  - closure_spacing
 
-  # if语句和实现不能在同一行，比如if true { print("") }, 看起来没生效
-  conditional_returns_on_newline:
-    severity: error
-    if_only: false
+  # if语句和实现不能在同一行，比如if true { print("") },
+  - conditional_returns_on_newline
+
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
