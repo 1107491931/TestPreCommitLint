@@ -233,6 +233,10 @@ implicit_getter:
 leading_whitespace:
   severity: error
 
+# 43、不要使用
+legacy_cggeometry_functions:
+    severity: error
+
 
 # 默认未开启的能力，需要在opt_in_rules中开启
 opt_in_rules:

@@ -11,7 +11,7 @@ typealias VoidCallBack = (String) -> Void
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(CGRectZero)
     }
 
     func test(name: String, callBack: VoidCallBack) {
