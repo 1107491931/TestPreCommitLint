@@ -5,6 +5,8 @@
 # whitelist_rules: #白名单规则，不能和上面两项混用
 # included: #希望Lint检索的路径，SwiftLint会扫描该路径下的所有.swift后缀的文件
 # excluded: #希望不要检索的路径,SwiftLint会无视掉该路径下的文件，一般比如Pods、Carthage或者一些三方库
+# only_rules: 不可以和 disabled_rules 或者 opt_in_rules 并列。类似一个白名单，只有在这个列表中的规则才是开启的。
+
 
 excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
   - Pods # 忽略通过CocoaPods倒入的第三方库

@@ -10,14 +10,13 @@ import UIKit
 typealias VoidCallBack = (String) -> Void
 
 class ViewController: UIViewController {
-    let a111 = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let list = [1, 3, 1]
-        if list.count == 0 {
+        test(name: "", callBack: { 
+            name in
             
-        }
+        })
 
     }
 
