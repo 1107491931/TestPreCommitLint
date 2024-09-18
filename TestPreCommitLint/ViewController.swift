@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             print(name)
         })
 
-        if true { print(Bundle()) }
+        if true { print(Bundle(), NSError.init()) }
         if true { print("") }
         if true { print("") }
         if true { print("") }
