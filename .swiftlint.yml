@@ -1,3 +1,9 @@
+# disabled_rules: #禁用指定的规则
+# opt_in_rules: #启动指定的规则
+# whitelist_rules: #白名单规则，不能和上面两项混用
+# included: #希望Lint检索的路径，SwiftLint会扫描该路径下的所有.swift后缀的文件
+# excluded: #希望不要检索的路径,SwiftLint会无视掉该路径下的文件，一般比如Pods、Carthage或者一些三方库
+
 excluded:  # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
   - Pods # 忽略通过CocoaPods倒入的第三方库
 
@@ -12,7 +18,7 @@ identifier_name:
     warning: 40
     error: 60
 
-# 2、{前应该有空格
+# 2、{前应该有空格，如果是函数应该与函数名同一行
 opening_brace:
   severity: warning
    #定义的函数是否允许多行展示，参数多的时候一般会多个参数换行对齐，所以设置为true。 如果设置为false，则多行函数会报错： Corrected Trailing Whitespace
@@ -35,8 +41,149 @@ line_length:
 colon:
   severity: warning
   flexible_right_spacing: false  #符号右侧允许出现多个空格吗? 如let a:     Int = 1
-  apply_to_dictionaries: true
+  apply_to_dictionaries: true  # 规则应用到字典类型中
+
+
+# 7、逗号后应该有空格，逗号前应该没有空格
+comma:
+  severity: warning
+
+# 8、函数行数
+function_body_length:
+  warning: 70
+  error: 100
+
+#9、 类型名， 类型名应该只包含字母数字字符， 并且以大写字母开头，长度在3-40个字符
+type_name:
+  min_length:
+    warning: 3
+    error: 0
+  max_length:
+    warning: 40
+    error: 1000
+  excluded: [] # 不包含的目录
+  allowed_symbols: [] # 允许的符号
+  unallowed_symbols_severity: error # 出现不允许的符号，直接error
+  validates_start_with_lowercase: error # 小写字母开头，直接error
+  validate_protocols: true # 校验protocol
+
+# 10、声明的成员属性，重写set、get时，必须先get、再set，保证前后顺序，很鸡肋
+computed_accessors_order:
+  severity: warning
+  order: get_set
+
+# 11、定义的类型，body行数不能太多, class、protocol、enum、struct等
+# 由于项目中很多文件代码都很多，因此这个规则可以禁用掉
+type_body_length:
+  warning: 1000
+  error: 1200
+
+# 12、代码复杂度，如果function中循环、if语句较多、嵌套的较多，则会增加复杂度
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+  ignores_case_statements: false
+
+# 13、文件代码行数限制
+file_length:
+  warning: 1000
+  error: 1200
+
+# 14、返回值为空，不需要显示声明void
+redundant_void_return:
+  severity: warning
+  include_closures: true # 包含闭包
+
+# 15、空行最多只能出现一行
+vertical_whitespace:
+  severity: warning
+  max_empty_lines: 1
+
+#16、tuple定义了太多的参数，代码可读性非常差
+large_tuple:
+    warning: 2
+    error: 3
+
+# 17、使用try! 方式
+force_try:
+  severity: error
+
+# 18、可以使用运算符，提高代码易读性, 比如 a = a + 2, 建议改为 a += 2
+shorthand_operator:
+  severity: error
+
+# 19、switch case语句中，case中至少有一条语句才使用fallthrough， 否则就使用case a, b: 方式
+no_fallthrough_only:
+  severity: warning
+
+#20、if、switch中，禁止出现相同的判断条件
+duplicate_conditions:
+  severity: error
+
+# 21、switch中不需要增加break， 默认是加上的
+unneeded_break_in_switch:
+  severity: warning
+
+# 22、代码结尾不需要分号
+trailing_semicolon:
+  severity: warning
+
+# 23、else、catch应该与前边的}在同一行，且前面得有空格
+statement_position:
+  severity: warning
+  statement_mode: default
+
+# 24、函数参数数量控制
+function_parameter_count:
+  warning: 5
+  error: 8
+  ignores_default_parameters: true
+
+# 25、函数返回值的 ——> 前后得加空格
+return_arrow_whitespace:
+  severity: warning
+
+# 26、声明可选类型并给默认值nil， 太多余了， 比如 var a: Int? = nil
+redundant_optional_initialization:
+  severity: warning
+
+# 27、语法糖错误，比如：Array<Iny> 建议 [Iny], Dictionary<Int, String> 建议 [Int: String]
+syntactic_sugar:
+    severity: warning
+
+# 28、使用type.random(in:)方式创建随机值，别用arc4random()了
+legacy_random:
+  severity: warning
+
+
+
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
+  # - computed_accessors_order
+  # - type_body_length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
