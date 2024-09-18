@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 
         }
 
-        let a1 = 100
+        let a = 100
 
         if let b = b {
 
