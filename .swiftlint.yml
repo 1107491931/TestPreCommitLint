@@ -267,7 +267,10 @@ opt_in_rules:
   # joined方法使用默认分隔符时(空字符串), 建议使用joined()方法, 而不是joined(separator: "")方法
   - joined_default_parameter
 
+  # let、var声明的变量与其它逻辑增加空白行间隔开
   - let_var_whitespace
+
+  - literal_expression_end_indentation
 
 
 disabled_rules: # 禁止生效的规则

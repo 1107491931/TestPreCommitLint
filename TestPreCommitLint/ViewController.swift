@@ -11,14 +11,18 @@ typealias VoidCallBack = (String) -> Void
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(CGRectZero)
-        
+
         let aaaaa: CGRect = .zero
         printContent(aaaaa)
     }
 
     func test(name: String, callBack: VoidCallBack) {
-        
+        let a1111111: [String: Any] = [
+            "age": 1,
+            "person": {
+                
+        }
+        ]
     }
 
 }
