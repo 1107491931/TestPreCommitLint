@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        test(name: "", name1: "", name2: "")
+        test(name: "", 
+             name1: "",
+                name2: "")
                 
     }
     

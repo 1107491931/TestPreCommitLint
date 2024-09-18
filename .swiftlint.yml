@@ -254,6 +254,10 @@ redundant_string_enum_value:
 vertical_parameter_alignment:
   severity: error
 
+# 48、调用多个参数函数时，如果多个参数换行，则要与第一个参数对齐
+vertical_parameter_alignment_on_call:
+  severity: error
+
 
 # 在opt_in_rules中开启了规则，同时在这个位置配置相关参数
 weak_delegate: # 看起来没生效
