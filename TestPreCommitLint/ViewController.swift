@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  1.swift
 //  TestPreCommitLint
 //
 //  Created by ChoMay on 2024/9/13.
@@ -31,11 +31,13 @@ class ViewController: UIViewController {
 
         print("增加了很多空行")
 
-        test {     }
+        test(name: "") {
+
+        }
 
     }
 
-    func test(callBack: () -> Void) {
+    func test(name: String, callBack: () -> Void) {
 
     }
 

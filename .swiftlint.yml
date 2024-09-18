@@ -155,6 +155,23 @@ syntactic_sugar:
 legacy_random:
   severity: warning
 
+# 29、重写的方式为空实现，则警告提示
+unneeded_override:
+  severity: warning
+  affect_initializers: false
+
+# 30、函数结尾得有一行空行
+trailing_newline:
+  severity: warning
+
+# 31、if、guard语句判空时，禁止使用 if let _ = xxx， guard let _ = xxx， 建议使用!= nil
+unused_optional_binding:
+  severity: warning
+  ignore_optional_try: false
+
+# 控制语句, for，while，do，catch语句中的条件不能包含在()中
+control_statement:
+  severity: warning
 
 
 
