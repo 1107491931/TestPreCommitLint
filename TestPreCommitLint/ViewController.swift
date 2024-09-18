@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         if true { print("") }
         if true { print("") }
         if true { return }
-        if true { return } else { return }
 
     }
 
