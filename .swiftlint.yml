@@ -254,6 +254,10 @@ redundant_string_enum_value:
 vertical_parameter_alignment:
   severity: error
 
+# 48、列表遍历时，如果indes或item未使用，则不要使用.enumerated()。比如for (↓_, foo) in bar.enumerated() {}
+unused_enumerated:
+  severity: warning
+
 
 # 以下几个参数在opt_in_rules中开启了规则，同时在这个位置配置相关参数
 weak_delegate: # 看起来没生效

@@ -11,18 +11,13 @@ typealias VoidCallBack = (String) -> Void
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        test(name: "", 
-             name1: "",
-             name2: "")
-                
-    }
-    
-    // MARK: 11111
-    func test(name: String, 
-              name1: String,
-              name2: String) {
+        
+        let list = [0, 1]
+        for (_, item) in list.enumerated() {
+            print(item)
+        }
+        
         
     }
-
+    
 }
