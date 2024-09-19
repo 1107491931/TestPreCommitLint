@@ -256,7 +256,7 @@ vertical_parameter_alignment:
 
 # 48、列表遍历时，如果indes或item未使用，则不要使用.enumerated()。比如for (↓_, foo) in bar.enumerated() {}
 unused_enumerated:
-  severity: warning
+  severity: error
 
 
 # 以下几个参数在opt_in_rules中开启了规则，同时在这个位置配置相关参数

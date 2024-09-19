@@ -12,10 +12,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let list = [0, 1]
-        for (_, item) in list.enumerated() {
-            print(item)
-        }
+
+        
+        
+        
+        
+        
+        
         
         
     }
