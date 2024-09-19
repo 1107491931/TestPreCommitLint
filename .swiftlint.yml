@@ -1,5 +1,6 @@
 # 参考1：https://juejin.cn/post/6844903576779620366#heading-12
 # 参考2：https://juejin.cn/post/6844903576821727239#heading-32
+# 所有使用规则可以在这里搜： https://realm.github.io/SwiftLint/force_unwrapping.html
 
 # disabled_rules: #禁用指定的规则
 # opt_in_rules: #启动指定的规则
@@ -29,7 +30,7 @@ opening_brace:
    #定义的函数是否允许多行展示，参数多的时候一般会多个参数换行对齐，所以设置为true。 如果设置为false，则多行函数会报错： Corrected Trailing Whitespace
   allow_multiline_func: true 
 
-# 3、可选类型禁止强制解包
+# 3、避免强制的类型转化， as!
 force_cast:
     severity: error
 
@@ -99,7 +100,7 @@ redundant_void_return:
   severity: warning
   include_closures: true # 包含闭包
 
-# 15、空行最多只能出现一行
+# 15、不能有连续多个空行
 vertical_whitespace:
   severity: warning
   max_empty_lines: 1
@@ -240,7 +241,7 @@ legacy_cggeometry_functions:
 
 # 44、不要使用oc遗留下来的常量， 如CGRectZero、CGRectInfinite等
 legacy_constant:
-  severity: warning
+  severity: error
 
 # 45、MARK: 前后都要加上单个空格
 mark:
@@ -258,6 +259,22 @@ vertical_parameter_alignment:
 unused_enumerated:
   severity: error
 
+# 49、使用 swift 提供的 struct 构造函数， 避免使用OC遗留的构造函数 比如 CGPointMake(10, 10)， 建议CGPoint(x: 10, y: 10)
+legacy_constructor:
+  severity: warning
+
+# 50、使用_ = foo() 代替 let _ = foo()
+redundant_discardable_let:
+  severity: warning
+
+# 51、定义操作符时，操作符左右应该有空格, 比如func <| (lhs: Int, rhs: Int) -> Int {}
+operator_whitespace:
+  severity: warning
+
+# 52、代码中存在toto时，必须解决掉
+todo:
+    severity: error
+    only: [TODO, FIXME]
 
 # 以下几个参数在opt_in_rules中开启了规则，同时在这个位置配置相关参数
 weak_delegate: # 看起来没生效
@@ -322,6 +339,21 @@ opt_in_rules:
 
   # 调用多个参数函数时，如果多个参数换行，则要与第一个参数对齐
   - vertical_parameter_alignment_on_call
+
+  # class属性应该指定变量类型，不合法示例：let a = 0
+  - explicit_type_interface
+
+  # 使用fatalError时，比如给错误信息。合法：fatalError("Foo")， 不合法fatalError()、fatalError("")
+  - fatal_error_message
+
+  # 使用.first(where:)代替.filter { }.first
+  - first_where
+
+  # 避免强制解包
+  - force_unwrapping
+
+  # 定义操作符函数只能是static函数， 比如 static func == (lhs: A, rhs: A) -> Bool {}
+  - static_operator
 
 
 disabled_rules: # 禁止生效的规则

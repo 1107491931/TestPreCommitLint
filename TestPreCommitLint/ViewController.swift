@@ -12,15 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
-        
-        
-        
-        
-        
-        
-        
+        // swiftlint:disable legacy_constant
+        let abc = CGRectZero
     }
     
 }
