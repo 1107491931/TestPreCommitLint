@@ -276,6 +276,11 @@ todo:
     severity: error
     only: [TODO, FIXME]
 
+# 使用// swiftlint:disable legacy_constant方式禁用规则后，需要在下一行重新开启能力// swiftlint:enable legacy_constant
+blanket_disable_command:
+  severity: error
+
+
 # 以下几个参数在opt_in_rules中开启了规则，同时在这个位置配置相关参数
 weak_delegate: # 看起来没生效
   severity: error
