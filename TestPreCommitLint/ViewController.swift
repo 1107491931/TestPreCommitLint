@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         
         // swiftlint:disable legacy_constant
         let abc = CGRectZero
+        
+        let abc2 = CGRectZero
     }
     
 }
