@@ -1,6 +1,7 @@
 # 参考1：https://juejin.cn/post/6844903576779620366#heading-12
 # 参考2：https://juejin.cn/post/6844903576821727239#heading-32
 # 所有使用规则可以在这里搜： https://realm.github.io/SwiftLint/force_unwrapping.html
+# 所有规则： https://realm.github.io/SwiftLint/rule-directory.html
 
 # disabled_rules: #禁用指定的规则
 # opt_in_rules: #启动指定的规则
@@ -276,7 +277,43 @@ todo:
     severity: error
     only: [TODO, FIXME]
 
-# 使用// swiftlint:disable legacy_constant方式禁用规则后，需要在下一行重新开启能力// swiftlint:enable legacy_constant
+# 53、枚举中不应该出现相同的名称（可能名称相同、参数不同）
+duplicate_conditions:
+  severity: error
+
+# 54、禁止重复的导入
+duplicate_imports:
+  severity: warning
+
+# 55、for中单个if判断，可以使用for-where
+for_where:
+  severity: warning
+  allow_for_as_filter: false
+
+# 56、方法调用，不要在方法名和()之间增加空格
+no_space_in_method_call:
+  severity: warning
+
+# 56、swiftlint注释的规范
+invalid_swiftlint_command:
+  severity: error
+
+# 57、switch case对齐规则
+switch_case_alignment:
+  severity: warning
+  indented_cases: false
+  ignore_one_liners: false
+
+# 58、使用#unavailable 或者 #available，不要有空的if语句实现
+unavailable_condition:
+  severity: warning
+
+# 59、实现了属性变量的set，但新的值未使用报错
+unused_setter_value:
+  severity: warning
+
+
+# 使用// swiftlint:disable legacy_constant方式禁用规则后，需要在下一行重新开启能力// swiftlint:enable legacy_constant,否则之后的代码都不再使用这种规则检测了
 blanket_disable_command:
   severity: error
 
@@ -306,7 +343,7 @@ opt_in_rules:
   - closure_spacing
 
   # if语句和实现不能在同一行，比如if true { print("") },
-  - conditional_returns_on_newline
+#  - conditional_returns_on_newline
 
   # 建议使用隐式返回闭包; 如: foo.map({ $0 + 1 })， 不需要显示return $0 + 1
   - implicit_return
@@ -328,6 +365,18 @@ opt_in_rules:
 
   # 定义函数时， 参数都在同一行，或者一行一个参数
   - multiline_parameters
+
+  # 多行参数的括号应该在新的一行
+  - multiline_arguments_brackets
+
+  # 链式函数调用应该在同一行或者一行一个
+  - multiline_function_chains
+
+  # 数字、字典等集合，初始化的值要么全在同一行，要么[、]在单独的行
+  - multiline_literal_brackets
+
+  # 定义函数时，要所有参数在同一行，要么()占用单独行，参数对齐
+  - multiline_parameters_brackets
 
   # 数字分割线。当在大量的小数中， 应该使用下划线来作为千分位分割线, 看起来没生效
   - number_separator
@@ -360,6 +409,62 @@ opt_in_rules:
   # 定义操作符函数只能是static函数， 比如 static func == (lhs: A, rhs: A) -> Bool {}
   - static_operator
 
+  #首选初始化器而不是对象字面量, 例如不推荐：let image = #imageLiteral(resourceName: "image.jpg")、let color = ↓#colorLiteral(red: 0, green: 1, blue: 1, alpha: 1)
+  - discouraged_object_literal
+
+  # 枚举关联值的数量不能太多， warning: 5, error: 6
+  - enum_case_associated_values_count
+
+  # 所有声明必须指定访问级别：private、public、...
+#  - explicit_acl
+
+  # 类、枚举、结构体、协议、全局变量、全局函数等应该指定访问级别
+#  - explicit_top_level_acl
+
+  # 文件名规范：可以设置前缀、后缀等
+  # - file_name
+
+  # 默认值放到参数的末尾
+  # - function_default_parameter_at_end
+
+  # 比较两个相同的操作数，警告
+  - identical_operands
+
+  # 使用制表符或空格使代码格式化，可以配置多个参数
+  # - indentation_width
+
+  # .last(where:) over .filter { }.last
+  - last_where
+
+  # 判断一个数是否是另一个数的倍数，不要使用%取余判断
+  - legacy_multiple
+
+  # 修饰语的顺序要一致， override、dynamic、final、lazy ...
+  - modifier_order
+
+  # 禁止调用父类方法，可以配置
+  # - prohibited_super_call
+
+  # 将self重新绑定到一致的标识符名称。如f let self = self { }， 禁止：if let this = self { return }
+  - self_binding
+
+  # 对可选绑定使用简写语法, 如if let i {}， 禁止if let i = i {}
+  - shorthand_optional_binding
+
+  # 弱引用不要使用unowned， 如{ [unowned self] in _ }
+  - unowned_variable_capture
+
+  # 未使用的import需要删除
+#  - unused_import
+
+  # 在结束的括号前不要有空行，函数结束、定义的集合结束等
+  - vertical_whitespace_closing_braces
+
+  # 在开始的括号后不要有空行，函数结束、定义的集合开始等
+  - vertical_whitespace_opening_braces
+
+  # 常量文字应该放在比较操作符的右侧， 如if foo == 42 {}， 禁止if 42 == foo {}
+  - yoda_condition
 
 disabled_rules: # 禁止生效的规则
   # - trailing_whitespace # 行尾不能含有空格，有时候代码间增加空行会导致有空格也被检测到，因此忽略掉这个规则
